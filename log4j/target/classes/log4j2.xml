@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+
+        <!-- Console output -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d [%t] %-5level: %msg%n"/>
+        </Console>
+
+        <!-- File output -->
+        <File name="FileLogger" fileName="logs/palindrome.log" append="true">
+            <PatternLayout pattern="%d [%t] %-5level: %msg%n"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
